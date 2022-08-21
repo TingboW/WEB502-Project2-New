@@ -7,6 +7,7 @@ const bodyParser = require('body-parser')
 const passport = require('passport');
 const { check, validationResult } = require("express-validator");
 const Users = require("../models/Users");
+//const Contact = require("../models/Contact");
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const JWT_SECRET = process.env.JWT_SECRET

@@ -1,6 +1,8 @@
+
 const express = require("express");
-const routes = require("./routes/router.js");
 var path = require("path");
+const mongoose = require("mongoose");
+
 const bodyParser = require("body-parser");
 const expressSession = require('express-session')({
     secret: 'secret',
@@ -13,7 +15,9 @@ const expressSession = require('express-session')({
 });
 const passport = require('passport');
 const Users = require("./models/Users.js");
+const Contact = require("./models/Contact.js");
 
+const routes = require("./routes/router.js");
 const app = express();
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -27,3 +31,9 @@ app.set("view engine", "html");
 app.use("/", routes);
 
 module.exports = app;
+
+// app.listen(3000, () => console.log("Listening on port 3000"))
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log(`Serving on port ${port}`)
+})
