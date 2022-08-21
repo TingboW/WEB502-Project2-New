@@ -542,38 +542,38 @@ Vue.component('products', {
 
         {
           sku: 13,
-          product: "Supergoop!",
-          image: "https://www.sephora.com/productimages/sku/s2421584-av-02-zoom.jpg?imwidth=1224",
-          description: "Unseen Sunscreen SPF 40 PA+++",
-          details: "A totally invisible, weightless, scentless, and makeup-gripping daily primer with SPF 40.",
-          price: 20
+          product: "Benefit Cosmetics",
+          image: "https://www.sephora.com/productimages/sku/s2080224-main-zoom.jpg?imwidth=1224",
+          description: "Gimme Brow+ Tinted Eyebrow Gel",
+          details: "A brow-volumizing tinted gel with tiny microfibers that create natural-looking fullness and definition.",
+          price: 24
         },
 
         {
           sku: 14,
-          product: "Supergoop!",
-          image: "https://www.sephora.com/productimages/sku/s2421584-av-02-zoom.jpg?imwidth=1224",
-          description: "Unseen Sunscreen SPF 40 PA+++",
-          details: "A totally invisible, weightless, scentless, and makeup-gripping daily primer with SPF 40.",
-          price: 20
+          product: "Natasha Denona",
+          image: "https://www.sephora.com/productimages/sku/s2512556-main-zoom.jpg?imwidth=1224",
+          description: "Pastel Eyeshadow Palette",
+          details: "A palette bursting with lush, inspiring colors from playful pinks and yellows to delicate purples and blues.",
+          price: 65
         },
 
         {
           sku: 15,
-          product: "Supergoop!",
-          image: "https://www.sephora.com/productimages/sku/s2421584-av-02-zoom.jpg?imwidth=1224",
-          description: "Unseen Sunscreen SPF 40 PA+++",
-          details: "A totally invisible, weightless, scentless, and makeup-gripping daily primer with SPF 40.",
-          price: 20
+          product: "Summer Fridays",
+          image: "https://www.sephora.com/productimages/sku/s2495497-av-01-zoom.jpg?imwidth=1224",
+          description: "Lip Butter Balm",
+          details: "A silky vegan balm that hydrates and soothes parched lips in seconds.",
+          price: 23
         },
 
         {
           sku: 16,
-          product: "Supergoop!",
-          image: "https://www.sephora.com/productimages/sku/s2421584-av-02-zoom.jpg?imwidth=1224",
-          description: "Unseen Sunscreen SPF 40 PA+++",
-          details: "A totally invisible, weightless, scentless, and makeup-gripping daily primer with SPF 40.",
-          price: 20
+          product: "Drunk Elephant!",
+          image: "https://www.sephora.com/productimages/sku/s2404739-av-13-zoom.jpg?imwidth=1224",
+          description: "Polypeptide Firming Moisturizer",
+          details: "A protein moisturizer that combines signal peptides, growth factors, amino acids, and pygmy waterlily to visibly improve skin‘s tone, texture, and firmness.",
+          price: 68
         },
 
       ],
