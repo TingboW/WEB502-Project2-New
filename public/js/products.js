@@ -443,38 +443,38 @@ Vue.component('products', {
   
         {
           sku: 2,
-          product: "Kitten",
-          image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/241793/kittens.jpg",
-          description: "This is a kitten",
-          details: "This is where some detailes on kittens would go. Shout out kittens for being adorable.",
-          price: 10
+          product: "Pat McGrath Labs",
+          image: "https://cdn.shopify.com/s/files/1/1463/9662/products/PMG_EYE_MSX_COMP_OPEN_1200x1200_ca7ce8df-d2d7-42d5-bf6f-e03090cc8f39_600x.jpg?v=1658425123",
+          description: "Mothership X: Moonlit Seduction",
+          details: "Extremely versatile and universally flattering, chic modern neutrals with high-performance technology. Apply sheer or build intensity.",
+          price: 128
         },
   
         {
           sku: 3,
-          product: "Shark",
-          image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/241793/shark.jpg",
-          description: "This is a shark",
-          details: "This is where some detailes on sharks would go. Damn nature, you scary.",
-          price: 15
+          product: "ILIA",
+          image: "https://cdn.shopify.com/s/files/1/0658/7691/products/NewILIAMatte_2000x.png?v=1658215453",
+          description: "Liquid Powder Matte Eye Tint",
+          details: "A clean, cream-to-powder eyeshadow that dries down to a crease-resistant finish—now in new matte and metallic shades.",
+          price: 28
         },
   
         {
           sku: 4,
-          product: "Puppy",
-          image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/241793/dog.jpg",
-          description: "This is a puppy",
-          details: "This is where some detailes on puppies would go. Shout out puppies for being adorable.",
-          price: 5
+          product: "UOMA Beauty",
+          image: "https://media.ulta.com/i/ulta/2597858_alt02?w=720",
+          description: "Trippin Smooth Powder",
+          details: "Create a soft-focus, matte finish that minimizes fine lines and reduces the appearance of pores for skin so smooth, you'll think you're TRIPPIN.",
+          price: 29.5
         },
   
         {
           sku: 5,
-          product: "Apple",
-          image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/241793/apple.jpg",
-          description: "This is an apple",
-          details: "This is where some detailes on apples would go. Shout out apples for being delicious.",
-          price: 1
+          product: "Half Magic",
+          image: "https://cdn.shopify.com/s/files/1/0608/3464/4145/products/220403_GLITTERPILL_1253_GOBLIN_01_V2_km_1200x.jpg?v=1651078067",
+          description: "GLITTERPILL Eye Paint + Liner",
+          details: "Multidimensional sparkle for an instantly elevated look. Each buildable gel is a curated mix of glitters of varying sizes and complementary hues。",
+          price: 20
         },
   
         {
