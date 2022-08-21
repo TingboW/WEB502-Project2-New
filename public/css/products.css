@@ -72,11 +72,12 @@ label {
 
 .main-wrapper .header {
   position: relative;
-  background: linear-gradient(to left, #16222A, #3A6073);
+ /* background: linear-gradient(to left, , #3A6073); */
   background-size: cover;
   height: 25em;
   width: 100vw;
-  box-shadow: inset -1px -3px 5px rgba(0, 0, 0, 0.5), inset 1px 3px 5px rgba(0, 0, 0, 0.5); }
+ /* box-shadow: inset -1px -3px 5px rgba(0, 0, 0, 0.5), inset 1px 3px 5px rgba(0, 0, 0, 0.5);*/
+ } 
   .main-wrapper .header h1 {
     position: absolute;
     text-align: center;
