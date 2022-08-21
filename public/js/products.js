@@ -434,17 +434,11 @@ Vue.component('products', {
       productsData: [
         {
           sku: 1,
-          product: "Monkey",
-          image: "https://cna.st/p/2hc5hQAHwcH8MgSAyfKsDr28j8DZ87S7UY14YZ2Am9b3dhfUmb8h9v4WF3dY2bdV2MqTyYprMpzuGT8PkKP18EgoVXu154DMjVJsoUHne8s?cid=62e1aa00d326d2d18719b205&xid=fr1661079155078ejg",
-          images: [
-            { image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/241793/chimpanzee.jpg" },
-            { image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/241793/gorilla.jpg" },
-            { image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/241793/red-monkey.jpg" },
-            { image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/241793/mandrill-monkey.jpg" }
-          ],
-          description: "This is a monkey",
-          details: "This is where some detailes on monkies would go. This monkey done seent some shit.",
-          price: 5.50
+          product: "Fenty Beauty",
+          image: "https://cdn.shopify.com/s/files/1/0341/3458/9485/products/57587.jpg?v=1652309037",
+          description: "Poutsicle Hydrating Lip Stain",
+          details: "Splash on this lip stain that goes on glossy and leaves behind a soft tint—delivering instant hydration for an effortless, low-maintenance look.",
+          price: 24
         },
   
         {
