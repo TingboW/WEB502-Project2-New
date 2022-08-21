@@ -479,48 +479,103 @@ Vue.component('products', {
   
         {
           sku: 6,
-          product: "Orange",
-          image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/241793/orange.jpg",
-          description: "This is an orange",
-          details: "This is where some detailes on oranges would go. Shout out oranges for being delicious.",
-          price: 1.1
+          product: "Charlotte Tilbury",
+          image: "https://images.ctfassets.net/wlke2cbybljx/3g6chu573a5tBrS10sT9Eh/10004087ee59774a310d24865d618c36/airbrush-flawless-still-life.jpg?w=500&h=500&fit=fill&fm=jpg&bg=",
+          description: "Airbrush Flawless Finish",
+          details: "Magic engraving available! Smoothing-effect makeup finishing powder for fair skin tones.",
+          price: 45
         },
   
         {
           sku: 7,
-          product: "Peach",
-          image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/241793/peach.jpg",
-          description: "This is a peach",
-          details: "This is where some detailes on peaches would go. Shout out peaches for being delicious.",
-          price: 1.5
+          product: "Rare Beauty",
+          image: "https://www.sephora.com/productimages/sku/s2418689-main-zoom.jpg?imwidth=1224",
+          description: "Stay Vulnerable Melting Cream Blush",
+          details: "A breakthrough, mistake-proof, liquid-like cream blush that melts into a second skin for the most natural-looking wash of soft-focus color.",
+          price: 21
         },
   
         {
           sku: 8,
-          product: "Mango",
-          image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/241793/mango.png",
-          description: "This is a mango",
-          details: "This is where some detailes on mangos would go. Shout out mangos for being delicious.",
-          price: 2
+          product: "LANEIGE",
+          image: "https://www.sephora.com/productimages/sku/s2594810-av-5-zoom.jpg?imwidth=1224",
+          description: "Lip Sleeping Mask",
+          details: "A leave-on lip mask that delivers intense moisture and antioxidants while you sleep with Berry Fruit Complex™, Murumuru seed and Shea butter.",
+          price: 24
         },
   
         {
           sku: 9,
-          product: "Cognac",
-          image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/241793/cognac.jpg",
-          description: "This is a glass of cognac",
-          details: "This is where some detailes on cognac would go. I'm like hey whats up, hello.",
-          price: 17.38
+          product: "Youth To The People",
+          image: "https://www.sephora.com/productimages/sku/s1863588-av-04-zoom.jpg?imwidth=1224",
+          description: "Superfood Antioxidant Cleanser",
+          details: "An award-winning face wash with cold-pressed antioxidants to remove makeup, prevent buildup in pores, and support skin’s pH balance.",
+          price: 36
         },
   
         {
           sku: 10,
-          product: "Chain",
-          image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/241793/chain.jpg",
-          description: "This is a chain",
-          details: "This is where some details on chains would go. 2Chainz but I got me a few on.",
-          price: 17.38
-        }
+          product: "Olaplex",
+          image: "https://www.sephora.com/productimages/sku/s2589760-main-zoom.jpg?imwidth=1224",
+          description: "No.4C Clarifying Shampoo",
+          details: "A clarifying shampoo that removes damaging impurity buildup from your environment, hair care, and daily life. See volume, softness, shine & color clarity.",
+          price: 30
+        },
+        
+        {
+          sku: 11,
+          product: "Dior",
+          image: "https://www.sephora.com/productimages/sku/s2449130-main-zoom.jpg?imwidth=1224",
+          description: "Lip Glow Oil",
+          details: "A nurturing, glossy lip oil that protects and enhances the lips, bringing out their natural color.",
+          price: 38
+        },
+
+        {
+          sku: 12,
+          product: "Supergoop!",
+          image: "https://www.sephora.com/productimages/sku/s2421584-av-02-zoom.jpg?imwidth=1224",
+          description: "Unseen Sunscreen SPF 40 PA+++",
+          details: "A totally invisible, weightless, scentless, and makeup-gripping daily primer with SPF 40.",
+          price: 20
+        },
+
+        {
+          sku: 13,
+          product: "Supergoop!",
+          image: "https://www.sephora.com/productimages/sku/s2421584-av-02-zoom.jpg?imwidth=1224",
+          description: "Unseen Sunscreen SPF 40 PA+++",
+          details: "A totally invisible, weightless, scentless, and makeup-gripping daily primer with SPF 40.",
+          price: 20
+        },
+
+        {
+          sku: 14,
+          product: "Supergoop!",
+          image: "https://www.sephora.com/productimages/sku/s2421584-av-02-zoom.jpg?imwidth=1224",
+          description: "Unseen Sunscreen SPF 40 PA+++",
+          details: "A totally invisible, weightless, scentless, and makeup-gripping daily primer with SPF 40.",
+          price: 20
+        },
+
+        {
+          sku: 15,
+          product: "Supergoop!",
+          image: "https://www.sephora.com/productimages/sku/s2421584-av-02-zoom.jpg?imwidth=1224",
+          description: "Unseen Sunscreen SPF 40 PA+++",
+          details: "A totally invisible, weightless, scentless, and makeup-gripping daily primer with SPF 40.",
+          price: 20
+        },
+
+        {
+          sku: 16,
+          product: "Supergoop!",
+          image: "https://www.sephora.com/productimages/sku/s2421584-av-02-zoom.jpg?imwidth=1224",
+          description: "Unseen Sunscreen SPF 40 PA+++",
+          details: "A totally invisible, weightless, scentless, and makeup-gripping daily primer with SPF 40.",
+          price: 20
+        },
+
       ],
       checkoutBool: false,
       cart: [],
