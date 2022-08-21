@@ -17,7 +17,7 @@ const passport = require('passport');
 const Users = require("./models/Users.js");
 const Contact = require("./models/Contact.js");
 
-const routes = require("./routes/router.js");
+
 const app = express();
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
