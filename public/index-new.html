@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width = device-width, initial-scale = 1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet"/>
+
+  <title>The Beauty Look Book</title>
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+  <link rel="stylesheet" type="text/scss" href="scss/products.scss" />
+
+</head>
+
+<body ontouchstart="" onload="disableButton(true)">
+  <div class="wrapper">
+    <main>
+      <div class="contact-us-card">
+        <div><button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button></div>
+      </div>
+      <section id="our-mission">
+        <header class="top-nav">
+
+          <a href="index-new.html"><div class="logo"><img src="images/beauty-app-logo.jpg" alt="app logo" width="70"></div></a>
+
+          <ul class="menu">
+            <li><a href="#about">About The Beauty Look Book</a></li>
+            <li><a href="#sustainability">New Products</a></li>
+            <li><a class="sub" href="#contact">Contact Us</a></li>
+          </ul>
+          <div class="action-menu">
+            <div class="login-home">
+              <button id='loginBtn' class="secondary-btn"><a href="#login">Login</a></button>
+              <button id='registerBtn' class="primary-btn"><a href="#register">Sign up</a></button>
+            </div>
+            <ul id="profileMenu" class="menu profileMenu hidden">
+              <li>
+                <button id='profileBtn' class="secondary-btn"><a href="#profile">Username</a></button>
+                <div class="sub-menu">
+                  <a id="profileLink" href="#Profile">View profile</a>
+                  <a id="logoutLink" href="#logout">Log out</a>
+                </div>
+              </li>
+            </ul>
+            </div>
+          <div class="hamburger-icon">
+            <div class="hamburger"></div>
+          </div>
+        </header>
+
+        <!-- Welcome Message -->
+        <div id='welcome-container'><h1 id="welcome-message"></h1></div>
+
+        <!-- Login/Register/Profile card -->
+        <div id='loginBox' class='login-container hidden'>
+          <!-- Login/Register -->
+          <div id="loginContent" class="login-content hidden">
+            <!-- <h1>Login or register</h1> -->
+            <!-- Tab links -->
+            <span id="close1" class="close">&times;</span>
+            <div class="tab">
+              <button id="loginTab" class="tablinks primary-btn" onclick="openTab(event, 'Login')">Login</button>
+              <button id="registerTab" class="tablinks primary-btn" onclick="openTab(event, 'Register')">Register</button>
+              
+            </div>
+
+            <!-- Tab content -->
+            <div id="Login" class="tabcontent">
+              <form id="login-form">
+                <div class="title"><h3>Login</h3></div>
+                <div class="field">
+                  <label for="username">Username:</label>
+                  <input type="text" name="username" id="username" autocomplete="username"/>
+                </div>
+                <div class="field">
+                  <label for="password">Password:</label>
+                  <input type="password" name="password" id="password" required autocomplete="current-password"/>
+                </div>
+                <div class="field">
+                  <input class="submit-btn primary-btn" type="submit" value="Submit" required/>
+                </div>
+                <label id="login-error-message"></label>
+              </form>
+            </div>
+
+            <div id="Register" class="tabcontent">
+              <!-- action="/register" method="post" -->
+              <form id="reg-form">
+                <div class="title"><h3>Register</h3></div>
+                <div class="field">
+                  <label for="firstname">First name:</label>
+                  <input type="text" name="firstname" id="r-firstname" required autocomplete="given-name"/>
+                  <br>
+                </div>
+                <div class="field">
+                  <label for="lastname">Last name:</label>
+                  <input type="text" name="lastname" id="r-lastname" required autocomplete="family-name"/>
+                  <br>
+                </div>
+                <div class="field">
+                  <label for="email">Email:</label>
+                  <input type="email" name="email" id="r-email" required autocomplete="email"/>
+                  <br>
+                </div>
+                <div class="field">
+                  <label for="username">Username:</label>
+                  <input type="text" name="username" id="r-username" required autocomplete="username"/>
+                  <br>
+                </div>
+                <div class="field">
+                  <label for="password">Password:</label>
+                  <input type="password" name="password" id="r-password" required autocomplete="new-password"/>
+                </div>
+                <div class="field">
+                  <input class="submit-btn primary-btn" type="submit" value="Submit" required/>
+                </div>
+                <label id="register-error-message"></label>
+              </form>
+            </div>
+          </div>
+
+          <!-- Profile -->
+          <div id="profileContent" class="profile-content hidden">
+            <span id="close2" class="close">&times;</span>
+            <div class="profileOverview">
+              <h1>Profile</h1>
+              <form><br>
+                <label for="p-firstname">First Name:</label>
+                <input type="text" id="p-firstname" name="firstname"><br><br>
+                <label for="p-lastname">Last Name:</label>
+                <input type="text" id="p-lastname" name="lastname"><br><br>
+                <label for="p-email">Email:</label>
+                <input type="email" name="email" id="p-email"><br><br>
+                <label for="p-username">Username:</label>
+                <input type="text" id="p-username" name="username"><br><br>
+                <label for="p-password">Password:</label>
+                <input type="password" autocomplete="off" id="p-password" name="password"><br><br>
+                <label for="profilepicture">Profile Picture:</label>
+                <img src="./public/images/profileavatar.png" width="100px" height="100px"><br><br>
+                <button class="btn primary-btn">Edit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+         <div class="card">
+          
+          <div class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white"
+          style="background-image: url('images/homepage-background.png');">
+          <br><br><div class="card-title"><h2 style="text-decoration: solid;">Introducing the Beauty Look Book</h2></div>
+          <p>
+            Every person deserves to feel beautiful and confident from the inside out 
+            and free to express themselves through the art and beauty of makeup.
+          </p>
+          <button class="primary-btn">
+            <div>Learn More</div>
+          </button>
+        </div>
+      </section>
+
+      <section id="about">
+        <div id="aboutText">
+          <h1>About The Beauty Look Book.</h1>
+          <p>
+            is dedicated to highlighting all things beauty including makeup, 
+            fragrances, hair care, skincare and more with some lifestyle elements mixed in.
+            <strong>The Sustainability Index.</strong>This program
+            provides substantial savings and rewards for being a conscious
+            consumer aiming to live carbon free.<br /><br />
+            Through our program, EVFY aims to help people become as
+            carbon-free as possible. We educate and guide on lifestyle
+            changes and provide services and resources to 'go green'.<br /><br />
+            <strong>The EVFY Sustainability Index</strong> is the new
+            benchmark for consumers to understand the environmental impact
+            of their decisions and social capital to share amongst peers
+            for a broader goal of making a world-wide impact.
+          </p>
+        </div>
+        </section>
+
+      <section id="products">
+        <div class="header">
+          <h1>New Beauty Products</h1></div>
+        <div id="vue">
+          <cart 
+          :cart="cart" 
+          :cart-sub-total="cartSubTotal" 
+          :tax="tax" 
+          :cart-total="cartTotal" 
+          :checkout-bool="checkoutBool">
+        </cart>
+
+          <products 
+          :cart="cart" 
+          :cart-sub-total="cartSubTotal" 
+          :tax="tax" :cart-total="cartTotal" 
+          :products-data="productsData">
+        </products>
+
+          <checkout-area 
+          v-if="checkoutBool" 
+          :cart="cart" 
+          :tax="tax" 
+          :cart-sub-total="cartSubTotal" 
+          :cart-total="cartTotal" 
+          :products-data="productsData" 
+          :total-with-tax="totalWithTax">
+        </checkout-area>
+        </div>
+      </section>
+
+  
+
+
+      <section id="sustainability-tier">
+        <h2>Choose Your Sustainability Tier</h2>
+        <p>
+          Simply select the sustainability tier that works best for you and your ‘green’ lifestyle. The more
+          sustainable you are, the higher your sustainability index will become. This ensures that you will also
+          receive the highest discounts and rewards from our favorite sustainable partners.
+        </p>
+
+        <table class="sustainability-table">
+          <thead id="thead">
+            <tr>
+              <th></th>
+              <th>Basic</th>
+              <th>Basic+</th>
+              <th>Premium</th>
+              <th>Premium+</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr class="fst-row">
+              <td>Description</td>
+              <td>
+                <p>&#8226 Home energy monitoring and monthly reports</p>
+                <p>&#8226 Sustainability Index</p>
+              </td>
+              <td>
+                <p>&#8226 Automated energy management to reduce monthly energy bill and
+                  carbon footprint (RECs)</p>
+              </td>
+              <td>
+                <p>&#8226 Incorporation of lifestyle activities outside home energy use to Sustainability Index
+                </p>
+              </td>
+              <td>
+                <p>&#8226 Access to exclusive retailers and discounts</p>
+              </td>
+            </tr>
+            <tr class="sec-row">
+              <td>Cost</td>
+              <td>$5/month</td>
+              <td>$10/month</td>
+              <td>$15/month</td>
+              <td>$20/month</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <button class="btn btn-success btn-lg">Sign Up Today</button>
+      </section>
+
+
+      <section id="partners-section">
+        <div>
+          <div class='partners-main-title'>
+            <h1>Our Partners</h1>
+          </div>
+      </section>
+
+      <section id="partners">
+        <div class="partner1" id="partner1">
+          <div class="partner-images">
+            <div></div>
+            <div></div>
+          </div>
+          <div class="partner-text">
+            <p class="title">Piconi Farms</p>
+            <p>Piconi Farms was built on the belief that meals should not only be from our farm to your table, but
+              organic and sustainable – and most importantly as special as possible for you and your family. We
+              carry this belief into everything we do.Piconi Farms specialty is home grown freshness and flavors
+              created with the ingenuity and passion inspired by years of family tradition.</p>
+          </div>
+        </div>
+
+        <div class="partner2" id="partner2">
+          <div class="partner-text">
+            <p class="title">Early Bird Wines</p>
+            <p>Early Bird Wine is America’s premier no additional sulfite wine. We produce our wines using a
+              proprietary green technology, which results in a cleaner, fresher tasting wine with enhanced flavors
+              and increased antioxidants for added health benefits and reduced risk of allergic reactions. Utilizing
+              a 100% natural process, no added sulfites, and no chemical components, we are able to provide an
+              affordable quality wine for you to enjoy, day and night, as part of your active, healthy lifestyle.
+            </p>
+          </div>
+          <div class="partner-images">
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+
+        <div class="partner3" id="partner3">
+          <div class="partner-images">
+            <div></div>
+          </div>
+          <div class="partner-text">
+            <p class="title">Sprouts Farmers Market</p>
+            <p>Our neighborhood grocery stores offer thousands of natural, organic & gluten-free foods. Discover
+              fresh produce, meats, vitamins, supplements & more.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="see-index">
+        <div class="content">
+          <h1 class="title">See Your Index Score.</h1>
+          <h2 class="login-link">
+            <a href="#see-index">Clear Here.</a>
+          </h2>
+        </div>
+      </section>
+
+      <section id="contact">
+        <form class="contact-form" method="POST" action="/" id="form" ref="form" onsubmit="myFunction()">
+          <h2 class="title">
+            To learn more about the EVFY program, and to receive a Level 2 home charger, please fill out the form
+            below.
+          </h2>
+          <p id="errorname"></p>
+          <div class="form-group">
+            <label for="firstname" class="text-secondary">First name</label>
+            <input name="firstname" type="text" class="form-control" id="firstname" onblur="checkFirstName(this.value)">
+          </div>
+          <div class="form-group">
+            <label for="lastname" class="text-secondary">Last name</label>
+            <input name="lastname" type="text" class="form-control" id="lastname" onblur="checkLastName(this.value)">
+          </div>
+          <p id="address-title">Address:</p>
+          <div class="form-group">
+            <label for="street" class="text-secondary">Street</label>
+            <input name="street" type="text" class="form-control" id="street" onblur="checkStreet(this.value)">
+          </div>
+          <div class="form-group">
+            <label for="city" class="text-secondary">City</label>
+            <input name="city" type="text" class="form-control" id="city" onblur="checkCity(this.value)">
+          </div>
+          <div class="form-group">
+            <label for="state" class="text-secondary">State</label>
+            <input name="state" type="text" class="form-control" id="state" onblur="checkState(this.value)">
+          </div>
+          <div class="form-group">
+            <label for="country" class="text-secondary">Country</label>
+            <input name="country" type="text" class="form-control" id="country" onblur="checkCountry(this.value)">
+          </div>
+          <div class="form-group">
+            <label for="zip" class="text-secondary">Zip</label>
+            <input name="zip" type="number" class="form-control" id="zip" onblur="checkZip(this.value)">
+          </div>
+          <div class="form-group">
+            <label for="phone" class="text-secondary">Cell phone</label>
+            <input name="phone" type="number" class="form-control" id="phone" onblur="checkPhone(this.value)">
+          </div>
+          <div class="form-group">
+            <label for="email" class="text-secondary">Email</label>
+            <input name="email" type="email" class="form-control" id="email" onblur="checkEmail(this.value)">
+          </div>
+          <div class="form-group randomcode">
+            <label for="randomcode" class="text-secondary">Enter code as seen:</label>
+            <input name="randomcode" type="text" class="form-control" id="codeentered" onblur="checkRandomCode(this.value)">
+            <p id="codes"></p>
+          </div>
+          <span id='code-error'></span>
+          <div class="contact-buttons">
+            <button type="reset" class="reset-btn ">Reset</button>
+            <button type="submit" class="primary-btn " id="contact-submit">Send</button>
+          </div>
+        </form>
+
+        <h1 id="contact-thanks">Thank you for submitting your contact details!</h1>
+      </section>
+
+
+      
+    </main>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-info">
+          <p class="footer-title">Customer Service Support:</p>
+          <p>1-877-GET-EVFY</p>
+          <p>info@ev-fy.com</p>
+          <div class="social-media">
+            <i class="fa fa-facebook-square"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-linkedin"></i>
+            <i class="fa fa-instagram"></i>
+          </div>
+        </div>
+        <div class="footer-info">
+          <p class="footer-title">Where to Find Us:</p>
+          <p>EVFY, Inc.</p>
+          <p>4360 Park Terrace Dr. Suite 100,</p>
+          <p>Westlake Village, CA 91361</p>
+        </div>
+        <div class="sectfooter-infoion footer-logo">
+          <img src="./public/images/Electrify_your_EV.png" alt="">
+        </div>
+      </div>
+      <div class="disclaimer">
+        <p>© 2021 EVFY All right reserved. <a href="https://www.ev-fy.com/privacy-policy">Privacy Policy</a> and <a href="https://www.ev-fy.com/terms-of-use">Terms of Use</a></p>
+      </div>
+    </footer>
+  </div>
+  <script src="js/login.js"></script>
+  <script src="js/captcha.js"></script>
+  <script src="js/hamburger-menu.js"></script>
+  <script src="js/checkForm.js"></script>
+  <script src="js/top.js"></script>
+  <script src="js/submit.js"></script>
+  <script src="js/products.js"></script>
+</body>
+</html>

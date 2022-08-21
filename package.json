@@ -1,0 +1,33 @@
+{
+  "name": "web502-project2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "lite": "lite-server",
+    "scss": "node-sass -o css/ css/",
+    "start": "npm run watch:all",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:scss": "onchange 'css/*.scss' -- npm run scss",
+    "watch:all": "parallelshell 'npm run watch:scss' 'npm run lite' "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TingboW/WEB502-Project2.git"
+  },
+  "author": "Tingbo Wang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TingboW/WEB502-Project2/issues"
+  },
+  "homepage": "https://github.com/TingboW/WEB502-Project2#readme",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "express": "^4.18.1",
+    "scss": "^0.2.4"
+  },
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "parallelshell": "^3.0.1"
+  }
+}
