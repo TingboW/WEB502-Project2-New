@@ -1,7 +1,5 @@
-
 const express = require("express");
 var path = require("path");
-const mongoose = require("mongoose");
 
 const bodyParser = require("body-parser");
 const expressSession = require('express-session')({
@@ -31,9 +29,6 @@ app.set("views", __dirname + "/views"); // general config
 app.set("views", path.join(__dirname,"views"));
 app.set("view engine", "html");
 
-app.use("/", routes);
-
-module.exports = app;
 
 // app.listen(3000, () => console.log("Listening on port 3000"))
 const port = process.env.PORT || 3000;
@@ -41,6 +36,8 @@ app.listen(port, () => {
     console.log(`Serving on port ${port}`)
 })
 
+/* MONGOOSE SETUP */
+const mongoose = require("mongoose");
 const passportLocalMongoose = require("passport-local-mongoose");
 
 mongoose.connect("mongodb://localhost/MyDatabase", {
@@ -82,7 +79,7 @@ app.post("/login", (req, res, next) => {
       if (err) {
         return next(err);
       }
-      return res.redirect("/");
+      return res.redirect("index-admin.html");
     });
   })(req, res, next);
 });
@@ -95,11 +92,11 @@ app.get("/login", (req, res) =>
 
 
 app.get("/index-admin", connectEnsureLogin.ensureLoggedIn(), (req, res) =>
-  res.sendFile("./views/index-admin.html", { root: __dirname })
+  res.sendFile("index-admin.html", { root: __dirname })
 );
 
 app.get("/private", connectEnsureLogin.ensureLoggedIn(), (req, res) =>
-  res.sendFile("./views/private.html", { root: __dirname })
+  res.sendFile("private.html", { root: __dirname })
 );
 
 app.get("/user", connectEnsureLogin.ensureLoggedIn(), (req, res) =>
@@ -107,10 +104,13 @@ app.get("/user", connectEnsureLogin.ensureLoggedIn(), (req, res) =>
 );
 
 app.get("/logout", (req, res) => {
-  req.logout(), res.sendFile("./views/logout.html", { root: __dirname });
+  req.logout(), res.sendFile("logout.html", { root: __dirname });
 });
 
 /* REGISTER SOME USERS */
-//UserDetails.register({username:'lucy',active:false},'lucy');
+UserDetails.register({username:'chloe',active:false},'chloe');
 //UserDetails.register({username:'joy',active:false},'joy');
 //UserDetails.register({username:'ray',active:false},'ray');
+
+app.use("/", routes);
+module.exports = app;

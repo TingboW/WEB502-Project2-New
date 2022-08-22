@@ -1,7 +1,7 @@
 body {
   display: flex;
   align-items: center;
-  background: #37474f;
+  background: darkcyan;
   font-family: monospace;
   color: #cfd8dc;
   justify-content: center;

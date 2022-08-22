@@ -1,4 +1,4 @@
-// Get the modal
+// Get the c
 var container = document.getElementById("loginBox");
 var loginContent = document.getElementById("loginContent");
 var profileContent = document.getElementById("profileContent");
