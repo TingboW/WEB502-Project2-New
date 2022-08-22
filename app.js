@@ -65,7 +65,7 @@ passport.serializeUser(UserDetails.serializeUser());
 passport.deserializeUser(UserDetails.deserializeUser());
 
 /* ROUTES */
-/*
+
 app.use(express.static(__dirname));
 const connectEnsureLogin = require("connect-ensure-login");
 
@@ -109,7 +109,7 @@ app.get("/user", connectEnsureLogin.ensureLoggedIn(), (req, res) =>
 app.get("/logout", (req, res) => {
   req.logout(), res.sendFile("./views/logout.html", { root: __dirname });
 });
-*/
+
 /* REGISTER SOME USERS */
 //UserDetails.register({username:'lucy',active:false},'lucy');
 //UserDetails.register({username:'joy',active:false},'joy');
