@@ -217,13 +217,6 @@ async function logout(event) {
   }
 }
 
-// Get time of day greeting
-const timeOfDay = () => {
-  const date = new Date;
-  let hours = date.getHours(); 
-  return (hours < 12)? "Morning" : ((hours <= 18 && hours >= 12 ) ? "Afternoon" : "Night");
-};
-
 // Decode JWT token
 const parseJwt = (token) => {
   try {
